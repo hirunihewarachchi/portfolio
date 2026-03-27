@@ -35,3 +35,57 @@ nav{
      color: red;
     text-shadow: 0 0 10px red;
  }
+
+#menu-icon,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem,0.5rem + 5vw, 3rem);
+}
+.nav-container.links{
+    display: flex;
+}
+
+.nav-container.links a{
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container.links a:hover{
+    color: red;
+    border-bottom: 2px solid red;
+}
+.dropdown{
+    z-index:100;
+    position: absolute;
+    top: 0;
+    transform: translateY(0px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(5px)brightness(40%);
+    box-shadow: 0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown.links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown.links a:hover{
+    background-color: red;
+}
+
