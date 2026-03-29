@@ -216,3 +216,61 @@ section{
         scale: 1;
     }
 }
+
+
+
+@media (max-width: 800px) {
+    nav.logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+    .main-container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .content h1 span {
+        font-size: 50px;;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+    #menu-icon,
+    .cancel{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-container .image{
+        width: 70%;
+        height: 60%;
+    }
+    .main-container .content{
+        width: 80%;
+    }
+    .main-container button{
+        margin-top: 15px;
+    }
+    .content h1 span {
+        font-size: 30px;;
+    }
+
+}
