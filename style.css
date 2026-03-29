@@ -204,3 +204,15 @@ section{
 .main-container .image:hover{
     animation: animate 1.5s ease-in-out infinite;
 }
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.2;
+    }
+    100%{
+        scale: 1;
+    }
+}
