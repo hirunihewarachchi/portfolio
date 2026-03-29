@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="assets/lib/normalize.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/assets/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/lib/fontawesome/css/all.min.css">
 
 
 
@@ -23,10 +23,10 @@
     <nav>
         <div class="nav-container">
             <div class="logo">
-                <span>Hiru</span> N Hewaarachchi
+                <span>H</span>N<span>H</span>
             </div>
             <div class="links">
-                <div class="link"><a href="#" class="active">Home</a></div>
+                <div class="link"><a href="#">Home</a></div>
                 <div class="link"><a href="#">About</a></div>
                 <div class="link"><a href="#">Education</a></div>
                 <div class="link"><a href="#">Skills</a></div>
@@ -35,29 +35,43 @@
                 <div class="link"><a href="#">Photo Hub</a></div>
                 <div class="link"><a href="#">Contact</a></div>
             </div>
+            <i id="menu-icon" class="fa-solid fa-bars" onclick="hamburg()"></i>
         </div>
-        <i id="menu-icon" class="fa-solid fa-bars"></i>
         <div class="dropdown">
-            <a href="Home"></a>
-            <a href="About"></a>
-            <a href="Education"></a>
-            <a href="Skills"></a>
-            <a href="My Works"></a>
-            <a href="Services"></a>
-            <a href="Photo Hub"></a>
-            <a href="Contact"></a>
-            <i class="fa-solid fa-xmark cancel"></i>
+            <div class="links">
+                <a href="Home">Home</a>
+                <a href="About">About</a>
+                <a href="Education">Education</a>
+                <a href="Skills">Skills</a>
+                <a href="My Works">My works</a>
+                <a href="Services">Services</a>
+                <a href="Photo Hub">Photo Hub</a>
+                <a href="Contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+
         </div>
     </nav>
 </header>
 
-<!--hero section-->
+
+    <!--hero section-->
 <section>
     <div class="main-container">
         <div class="content">
-            <h1> Hey I'm <span>HIRU</span></h1>
+            <h1> Hey I'm <div><span>HIRU N HEWAARACHCHI</span> </div></h1>
             <div class="typewriter">I'm a<span class="typewriter-text"></span></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad corporis deserunt et ex, harum odio sunt velit. Ab corporis delectus deserunt distinctio error, odit reprehenderit. Accusantium consequuntur obcaecati odit temporibus!</p>
+            <p>"Blending Code, Creativity, and Intelligence"</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+                    <a href="#"><i class="fa-brands fa-github"></i> </a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i> </a>
+                </div>
+                <div class="btn">
+                    <button> Download CV</button>
+                </div>
+            </div>
             <div class="image">
 <!--                <img src="assets/lib/images/img.png" alt="">-->
             </div>
@@ -66,16 +80,9 @@
 
 </section>
 <footer>
-    <div class="social-links">
-        <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
-        <a href="#"><i class="fa-brands fa-github"></i> </a>
-        <a href="#"><i class="fa-brands fa-facebook"></i> </a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i> </a>
-    </div>
-    <div class="btn">
-        <button> Download CV</button>
-    </div>
+
 
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
