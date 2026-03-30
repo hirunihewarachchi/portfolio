@@ -18,10 +18,12 @@ body{
 
 /*Header*/
 nav{
-    /*position: fixed;*/
+    position: fixed;
     width: 100%;
     height: 10vh;
-    position: sticky;
+    background-color: black;
+    opacity: 70%;
+    top:0;
 }
 
 .nav-container{
@@ -107,9 +109,12 @@ nav{
     color: white;
     text-align: center;
 }
+
+/*Hero section*/
 section{
     width: 100%;
     height: 90vh;
+    padding-top: 80px;
 }
 
 .main-container{
@@ -118,6 +123,7 @@ section{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    position: absolute;
 }
 
 .main-container .content{
@@ -127,13 +133,22 @@ section{
 }
 
 .main-container .image{
+    bottom: 20vh;
     width: 500px;
-    height: 80vh;
-    border-radius: 100%;
+    height: 75vh;
+    border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 50px red;
     z-index: -1;
+    position: relative;
+    top: 2vh;
+    padding-top: 0vh;
 }
+
+.main-container .image img{
+    width: 100%;
+}
+
 
 .content h1{
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
@@ -216,9 +231,6 @@ section{
     box-shadow: 0 0 40px 5px red;
 }
 
-.main-container .image img{
-    width: 100%;
-}
 
 .main-container .image:hover{
     animation: animate 1.5s ease-in-out infinite;
@@ -240,25 +252,29 @@ section{
 /*Add css for about*/
 
 #about {
+    /*position: absolute;*/
     width: 100vw;
+    height: 100vh;
     margin: 0px auto;
     font-family: sans-serif;
+    padding-top: 10vh;
 
 }
 
 #about .content .main h1{
+    top: 10vh;
     color: red;
-    font-size: 100px;
+    font-size: 90px;
     font-weight: 1000;
     font-style: oblique;
 }
 
 #about .content .main h1 span {
-    font-size: 110px;
+    font-size: 100px;
     color: white;
 }
 
-#about .content .buttom h1{
+#about .content .bottom h1{
     color: white;
     text-align: center;
     text-shadow: red 2px 0px 0px;
@@ -267,6 +283,7 @@ section{
 /*    Education*/
 
 #education{
+    /*position: absolute;*/
     width: 100vw;
     /*height: 100vh;*/
     margin: 0px auto;
@@ -289,10 +306,22 @@ section{
     text-align: center;
     font-family: 'Roboto Mono';
     padding: 1em;
+    padding-top: 10vh;
 }
 
-h1 {
-    font-size: 2.2em;
+.education .title h1 {
+    font-size: 3.2em;
+    font-weight: 1000;
+    font-style: oblique;
+    background: linear-gradient(135deg, #000000, #8B0000 50%, #FF0000);
+    text-shadow: red 2px 2px 2px;
+    padding: 10px 10px;
+}
+
+.education .flip .front h1{
+    color: red; /* red to white */
+    text-shadow: black 5px 5px 5px;
+    font-weight: 700;
 }
 
 /*base*/
@@ -351,7 +380,7 @@ h1 {
     >.front,
     >.back {
         display: block;
-        color: white;
+        color: red;
         width: inherit;
         background-size: cover!important;
         background-position: center!important;
@@ -362,7 +391,7 @@ h1 {
         p {
             font-size: 0.9125rem;
             line-height: 160%;
-            color: #999;
+            color: white;
         }
     }
 }
@@ -371,9 +400,17 @@ h1 {
     text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
 }
 
-
-
-
+/*Footer*/
+.text {
+    position: fixed;
+    bottom: 0;   /* stick to bottom */
+    left: 0;
+    width: 100%; /* stretch across screen */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
 
 
 
@@ -392,6 +429,10 @@ h1 {
         left: 15px;
         font-size: 1.5rem;
     }
+
+    .main-container .image{
+        padding-top: 10vh;
+    }
     .main-container{
         display: flex;
         flex-direction: column-reverse;
@@ -408,7 +449,6 @@ h1 {
     .cancel{
         display: block;
     }
-
 
     /*Hero Section*/
     .main-container .content{
@@ -427,12 +467,12 @@ h1 {
 
     /*About*/
     #about .content .main h1{
-        font-size: 10px;
+        font-size: 70px;
         font-weight: 500;
     }
 
     #about .content .main h1 span {
-        font-size: 10px;
+        font-size: 80px;
     }
 }
 
@@ -440,6 +480,7 @@ h1 {
     .main-container .image{
         width: 70%;
         height: 60%;
+        padding-top: 10vh;
     }
     .main-container .content{
         width: 80%;
@@ -453,11 +494,11 @@ h1 {
 
     /*About*/
     #about .content .main h1{
-        font-size: 10px;
+        font-size: 40px;
     }
 
     #about .content .main h1 span {
-        font-size: 10px;
+        font-size: 50px;
     }
 
 }
