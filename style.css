@@ -510,6 +510,7 @@ section{
 
 
 
+
 @media (max-width: 768px) {
 
     /*Nav Bar*/
@@ -565,7 +566,15 @@ section{
         font-size: 80px;
     }
 
+
+
+
+
 /*    skill section*/
+
+    .skill{
+        top: 130vh;
+    }
 
     #skill .container     .logo-scroller-item {
         min-width: 100px; /* Adjust minimum width for smaller screens */
@@ -593,11 +602,11 @@ section{
 
     /*About*/
     #about .content .main h1{
-        font-size: 40px;
+        font-size: 20px;
     }
 
     #about .content .main h1 span {
-        font-size: 50px;
+        font-size: 30px;
     }
 
 /*    skill section*/
