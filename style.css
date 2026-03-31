@@ -14,6 +14,7 @@ body{
     height: 100vh;
     background-color: black;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 /*Header*/
@@ -326,7 +327,7 @@ section{
     font-style: oblique;
     background: linear-gradient(135deg, #000000, #8B0000 50%, #FF0000);
     text-shadow: red 2px 2px 2px;
-    padding: 10px 10px;
+    padding: 5px 5px;
 }
 
 .education .flip .front h1{
@@ -414,9 +415,9 @@ section{
 /*Footer*/
 .text {
     position: fixed;
-    bottom: 0;   /* stick to bottom */
+    bottom: 0;
     left: 0;
-    width: 100%; /* stretch across screen */
+    width: 100%;
     background-color: black;
     color: white;
     text-align: center;
@@ -427,11 +428,7 @@ section{
 
 
 
-
-
-
-
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 
     /*Nav Bar*/
     nav.logo{
@@ -485,9 +482,10 @@ section{
     #about .content .main h1 span {
         font-size: 80px;
     }
-}
 
-@media (max-width: 768px) {
+
+
+@media (max-width: 480px) {
     .main-container .image{
         width: 70%;
         height: 60%;
@@ -511,6 +509,7 @@ section{
     #about .content .main h1 span {
         font-size: 50px;
     }
+
 
 }
 
