@@ -84,7 +84,6 @@ function initiateLogoScroller(container = document) {
 
         function startAnimation() {
 
-            // 🛑 Kill previous animation if exists
             if (logoScrollers[row]) {
                 logoScrollers[row].kill();
                 delete logoScrollers[row];
@@ -94,7 +93,6 @@ function initiateLogoScroller(container = document) {
             let rowWidth = row.scrollWidth;
             const containerWidth = row.parentElement.offsetWidth;
 
-            // 🔁 Clone items for infinite loop (ONLY ONCE)
             if (!row.dataset.cloned) {
                 let totalWidth = rowWidth;
 
@@ -110,14 +108,12 @@ function initiateLogoScroller(container = document) {
                 rowWidth = row.scrollWidth;
             }
 
-            // 🎯 Reset position
             gsap.set(row, { x: 0 });
 
             // ⚡ Speed control (adjust this value if needed)
             let speed = 100; // lower = faster
             let duration = rowWidth / speed;
 
-            // 🎬 GSAP animation
             const tl = gsap.timeline({
                 repeat: -1,
                 defaults: { ease: "none" }
@@ -130,23 +126,19 @@ function initiateLogoScroller(container = document) {
 
             logoScrollers[row] = tl;
 
-            // 🖱 Pause on hover
             row.addEventListener("mouseenter", () => tl.pause());
             row.addEventListener("mouseleave", () => tl.resume());
 
-            // 📱 Pause on touch (mobile)
             row.addEventListener("touchstart", () => tl.pause());
             row.addEventListener("touchend", () => tl.resume());
         }
     });
 }
 
-// 🚀 Run after FULL page load
 window.addEventListener("load", () => {
     initiateLogoScroller();
 });
 
-// 🔄 Re-run on window resize (important for responsiveness)
 window.addEventListener("resize", () => {
     initiateLogoScroller();
 });
