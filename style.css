@@ -160,6 +160,8 @@ section{
 }
 
 
+
+
 .content h1{
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
     /*text-align: center;*/
@@ -216,7 +218,6 @@ section{
     filter: drop-shadow(0 0 10px  red);
     color: black;
     background-color: red;
-
 }
 
 .content button{
@@ -231,6 +232,7 @@ section{
     font-weight: 700;
     border-radius: 5px;
     transition: 0.2s linear;
+
 }
 
 .content button:hover{
@@ -269,14 +271,14 @@ section{
     margin: 2px 2px auto;
     font-family: sans-serif;
     padding-top: 10vh;
-
-
+    text-align: center;
+    cursor: pointer;
 }
 
 #about .content .main h1{
     top: 10vh;
     color: red;
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 1000;
     font-style: oblique;
 }
@@ -326,7 +328,7 @@ section{
     font-size: 3.2em;
     font-weight: 1000;
     font-style: oblique;
-    background: linear-gradient(135deg, #000000, #8B0000 50%, #FF0000);
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
     text-shadow: red 2px 2px 2px;
     padding: 5px 5px;
 }
@@ -439,7 +441,7 @@ section{
     font-size: 3.2em;
     font-weight: 1000;
     font-style: oblique;
-    background: linear-gradient(135deg, #000000, #8B0000 50%, #FF0000);
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
     text-shadow: red 2px 2px 2px;
     padding: 5px 5px;
     top: 10vh;
@@ -531,7 +533,7 @@ section{
     font-size: 3.2em;
     font-weight: 1000;
     font-style: oblique;
-    background: linear-gradient(135deg, #000000, #8B0000 50%, #FF0000);
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
     text-shadow: red 2px 2px 2px;
     padding: 5px 5px;
     width: 100vw;
@@ -628,7 +630,7 @@ body {
     font-size: 3.2em;
     font-weight: 1000;
     font-style: oblique;
-    background: linear-gradient(135deg, #000000, #8B0000 50%, #FF0000);
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
     text-shadow: red 2px 2px 2px;
     padding: 5px 5px;
     width: 100vw;
@@ -783,14 +785,75 @@ body {
 /*    skill section*/
 
     .skill{
-        top: 130vh;
+        /*top: 130vh;*/
     }
 
     #skill .container     .logo-scroller-item {
-        min-width: 100px; /* Adjust minimum width for smaller screens */
+        min-width: 100px;
     }
     .logo-scroller-item span img {
-        max-height: 80px;  /* Smaller height for tablets */
+        max-height: 80px;
+    }
+}
+
+
+/*photohub*/
+
+.photo_hub{
+    height: 100vh;
+    top: 100vh;
+    position: relative;
+}
+
+.photo_hub .title h1{
+    color: white;
+    text-align: center;
+    font-size: 3.2em;
+    font-weight: 1000;
+    font-style: oblique;
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
+    text-shadow: red 2px 2px 2px;
+    padding: 5px 5px;
+    top: 10vh;
+    width: 100vw;
+}
+
+.photo_hub .gallery {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+}
+
+.gallery-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 20s linear infinite;
+    position: absolute;
+}
+
+.gallery-track img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 10px;
+    /*position: absolute;*/
+
+}
+
+.gallery:hover .gallery-track {
+    animation-play-state: paused;
+}
+
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }
 
@@ -821,10 +884,10 @@ body {
 
 /*    skill section*/
     #skill .container .logo-scroller-item {
-        min-width: 80px; /* Adjust minimum width for mobile phones */
+        min-width: 80px;
     }
     .logo-scroller-item span img {
-        max-height: 60px;  /* Even smaller size for mobile phones */
+        max-height: 60px;
     }
 
 

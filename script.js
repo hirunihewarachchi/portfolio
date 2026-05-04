@@ -1,144 +1,143 @@
-function hamburg(){
-    const navbar = document.querySelector(".dropdown")
-    navbar.style.transform = "translateY(0px)"
+// ================= NAVBAR =================
+function hamburg() {
+    const navbar = document.querySelector(".dropdown");
+    if (navbar) navbar.style.transform = "translateY(0)";
 }
 
-function cancel(){
-    const navbar = document.querySelector(".dropdown")
-    navbar.style.transform = "translateY(-10000px)"
+function cancel() {
+    const navbar = document.querySelector(".dropdown");
+    if (navbar) navbar.style.transform = "translateY(-100%)";
 }
 
 
-//for Typewriter effect
-
+// ================= TYPEWRITER =================
 const texts = [
     " WEB DEVELOPER",
     " AI ENGINEER",
     " PHOTOGRAPHER"
-]
+];
 
-let speed = 100;
-
-const textElements = document.querySelector(".typewriter-text")
-
+let typingSpeed = 100;
 let textIndex = 0;
 let characterIndex = 0;
 
-function typeWriter(){
-    if(characterIndex < texts[textIndex].length){
-        textElements.innerHTML += texts[textIndex].charAt(characterIndex);
+const textElement = document.querySelector(".typewriter-text");
+
+function typeWriter() {
+    if (!textElement) return;
+
+    if (characterIndex < texts[textIndex].length) {
+        textElement.textContent += texts[textIndex].charAt(characterIndex);
         characterIndex++;
-        setTimeout(typeWriter,speed);
-    }else{
-        setTimeout(eraseText, 1000)
+        setTimeout(typeWriter, typingSpeed);
+    } else {
+        setTimeout(eraseText, 1000);
     }
 }
 
-function eraseText(){
-    if(textElements.innerHTML.length > 0){
-        textElements.innerHTML = textElements.innerHTML.slice(0,-1)
-        setTimeout(eraseText,50)
-    }
-    else{
-        textIndex = (textIndex + 1) % texts.length
+function eraseText() {
+    if (!textElement) return;
+
+    if (textElement.textContent.length > 0) {
+        textElement.textContent = textElement.textContent.slice(0, -1);
+        setTimeout(eraseText, 50);
+    } else {
+        textIndex = (textIndex + 1) % texts.length;
         characterIndex = 0;
-        setTimeout(typeWriter, 500)
+        setTimeout(typeWriter, 500);
     }
 }
 
-typeWriter();
+// ================= SKILL LOGO SEAMLESS SCROLLER =================
+function initiateLogoScroller() {
 
+    if (typeof gsap === "undefined") {
+        console.error("GSAP not loaded");
+        return;
+    }
 
-// Skill Set
-
-let logoScrollers = {};
-
-function initiateLogoScroller(container = document) {
-    const rows = container.querySelectorAll(".logo-scroller-row");
+    const rows = document.querySelectorAll(".logo-scroller-row");
 
     rows.forEach(row => {
 
-        const images = row.querySelectorAll("img");
-        let loadedCount = 0;
+        // Stop previous animation
+        gsap.killTweensOf(row);
 
-        // 🔥 Wait until all images are loaded
-        images.forEach(img => {
-            if (img.complete) {
-                loadedCount++;
-            } else {
-                img.addEventListener("load", checkAllLoaded);
-                img.addEventListener("error", checkAllLoaded);
-            }
+        // Reset original content (important for re-init)
+        if (!row.dataset.original) {
+            row.dataset.original = row.innerHTML;
+        }
+        row.innerHTML = row.dataset.original;
+
+        const originalContent = row.innerHTML;
+
+        // Create wrapper for seamless duplication
+        row.innerHTML = originalContent + originalContent;
+
+        // Force layout update
+        const fullWidth = row.scrollWidth / 2;
+
+        // Set starting position
+        gsap.set(row, { x: 0 });
+
+        // Speed control (smaller = faster)
+        const speed = 100;
+        const duration = fullWidth / speed;
+
+        const tween = gsap.to(row, {
+            x: -fullWidth,
+            duration: duration,
+            ease: "none",
+            repeat: -1
         });
 
-        if (loadedCount === images.length) {
-            startAnimation();
-        }
+        // Pause on hover
+        row.addEventListener("mouseenter", () => tween.pause());
+        row.addEventListener("mouseleave", () => tween.resume());
 
-        function checkAllLoaded() {
-            loadedCount++;
-            if (loadedCount === images.length) {
-                startAnimation();
-            }
-        }
-
-        function startAnimation() {
-
-            if (logoScrollers[row]) {
-                logoScrollers[row].kill();
-                delete logoScrollers[row];
-            }
-
-            const rowItems = Array.from(row.children);
-            let rowWidth = row.scrollWidth;
-            const containerWidth = row.parentElement.offsetWidth;
-
-            if (!row.dataset.cloned) {
-                let totalWidth = rowWidth;
-
-                while (totalWidth < containerWidth * 2) {
-                    rowItems.forEach(item => {
-                        const clone = item.cloneNode(true);
-                        row.appendChild(clone);
-                        totalWidth += item.offsetWidth;
-                    });
-                }
-
-                row.dataset.cloned = "true";
-                rowWidth = row.scrollWidth;
-            }
-
-            gsap.set(row, { x: 0 });
-
-            // ⚡ Speed control (adjust this value if needed)
-            let speed = 100; // lower = faster
-            let duration = rowWidth / speed;
-
-            const tl = gsap.timeline({
-                repeat: -1,
-                defaults: { ease: "none" }
-            });
-
-            tl.to(row, {
-                x: -rowWidth / 2,
-                duration: duration
-            });
-
-            logoScrollers[row] = tl;
-
-            row.addEventListener("mouseenter", () => tl.pause());
-            row.addEventListener("mouseleave", () => tl.resume());
-
-            row.addEventListener("touchstart", () => tl.pause());
-            row.addEventListener("touchend", () => tl.resume());
-        }
+        // Touch support
+        row.addEventListener("touchstart", () => tween.pause());
+        row.addEventListener("touchend", () => tween.resume());
     });
 }
 
+// ================= PHOTOHUB SCROLLER =================
+const track = document.getElementById("track");
+
+let scrollSpeed = 1;
+let position = 0;
+
+function animateGallery() {
+    if (!track) return;
+
+    position -= scrollSpeed;
+
+    if (position <= -track.scrollWidth / 2) {
+        position = 0;
+    }
+
+    track.style.transform = `translateX(${position}px)`;
+    requestAnimationFrame(animateGallery);
+}
+
+
+// ================= INIT =================
 window.addEventListener("load", () => {
+    typeWriter();
     initiateLogoScroller();
+
+    if (track) {
+        track.innerHTML += track.innerHTML; // duplicate once
+        animateGallery();
+    }
 });
 
+
+// ================= RESIZE FIX =================
+let resizeTimeout;
 window.addEventListener("resize", () => {
-    initiateLogoScroller();
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        initiateLogoScroller();
+    }, 300);
 });
