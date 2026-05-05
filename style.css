@@ -723,6 +723,33 @@ body {
     word-spacing: normal;
 }
 
+/*Assignment*/
+
+#assignments {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: var(--spacing-xxl) var(--spacing-l);
+    background-color: black;
+}
+
+.assignments .title h1 {
+    color: white;
+    /*position: absolute;*/
+    text-align: center;
+    font-size: 3.2em;
+    font-weight: 1000;
+    font-style: oblique;
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
+    text-shadow: red 2px 2px 2px;
+    padding: 5px 5px;
+    width: 100vw;
+    top: 10vh;
+}
+
 @media (max-width: 768px) {
 
     /*Nav Bar*/
