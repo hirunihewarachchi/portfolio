@@ -263,9 +263,10 @@ section{
 }
 
 .typewriter span{
-    color: red;
-    text-shadow: 0 0 10px red;
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
     font-size: 30px;
+    transition: color 0.4s ease;
 }
 
 .content p{
