@@ -389,6 +389,20 @@ body {
     gap: 40px;
 }
 
+/* each box */
+.about-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.8s ease;
+}
+
+
 /*    Education*/
 
 #education{
