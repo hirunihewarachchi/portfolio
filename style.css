@@ -1578,3 +1578,32 @@ body.light-mode .glass-content h2 {
 body.light-mode .glass-content p {
     color: rgba(0, 0, 0, 0.65);
 }
+
+
+/* Contact */
+body.light-mode .contact-section {
+    background-color: #f5f5f5;
+}
+
+body.light-mode .info-card {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .info-card:hover {
+    background: rgba(180, 0, 0, 0.07);
+    border-color: rgba(180, 0, 0, 0.4);
+}
+
+body.light-mode .info-details h3 {
+    color: #111;
+}
+
+body.light-mode .info-details p {
+    color: rgba(0, 0, 0, 0.65);
+}
+
+body.light-mode .contact-form-wrapper {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+}
