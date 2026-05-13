@@ -1352,7 +1352,7 @@ glass-card:hover {
     padding: 100px 5%;
 }
 
-contact-section .title h1 {
+.contact-section .title h1 {
     color: white;
     text-align: center;
     font-size: 3.2em;
@@ -1364,3 +1364,11 @@ contact-section .title h1 {
     width: 100vw;
     margin-bottom: 80px;
 }
+
+
+.contact-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
