@@ -812,6 +812,20 @@ body {
     transform: translateX(10px);
 }
 
+/* Interactivity Classes */
+.skill-icon.dimmed {
+    opacity: 0.1;
+    filter: blur(8px) grayscale(1);
+    transform: scale(0.7);
+}
+
+.skill-icon.highlight {
+    color: #ff0000;
+    filter: drop-shadow(0 0 20px #ff0000);
+    transform: scale(1.4);
+    z-index: 10;
+}
+
 /*Service */
 
 #services{
