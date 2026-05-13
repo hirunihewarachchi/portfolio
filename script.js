@@ -111,3 +111,35 @@ function initSkillsInteraction() {
     });
 }
 
+
+// ================= PHOTOHUB LOOP =================
+function initPhotoHubLoop() {
+    const track = document.getElementById("track");
+    if (!track) return;
+
+    track.innerHTML += track.innerHTML;
+
+    const trackWidth = track.scrollWidth / 2;
+    let position = 0;
+    let isPaused = false;
+
+    function animate() {
+        if (!isPaused) {
+            position -= 1.5;
+
+            if (position <= -trackWidth) {
+                position = 0;
+            }
+
+            track.style.transform = `translateX(${position}px)`;
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    track.addEventListener("mouseenter", () => isPaused = true);
+    track.addEventListener("mouseleave", () => isPaused = false);
+}
+
