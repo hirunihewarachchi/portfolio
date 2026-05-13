@@ -224,11 +224,13 @@ section{
     height: 75vh;
     border-radius: 50%;
     overflow: hidden;
-    box-shadow: 0 0 50px red;
+    box-shadow: 0 0 50px var(--accent);
     z-index: -1;
     position: relative;
     top: 2vh;
     padding-top: 0vh;
+    background-color: var(--bg-primary);
+    transition: box-shadow 0.4s ease, background-color 0.4s ease;
 
 }
 
