@@ -156,3 +156,139 @@ function initAboutAnimation() {
     initAboutObserver();
     initAboutParallax();
 }
+
+
+// ---------- SPLIT LETTERS ----------
+function splitAboutLetters(elements) {
+    elements.forEach(el => {
+        const text = el.innerText;
+        el.innerHTML = "";
+
+        text.split("").forEach(char => {
+            const span = document.createElement("span");
+
+            if (char === " ") {
+                span.className = "letter-space";
+                span.innerHTML = "&nbsp;";
+            } else {
+                span.className = "single-letter";
+                span.textContent = char;
+            }
+
+            el.appendChild(span);
+        });
+    });
+}
+
+
+// ---------- SCROLL OBSERVER ----------
+function initAboutObserver() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("animate-reveal");
+
+                if (!glowStarted) {
+                    glowStarted = true;
+                    startTravelingGlow();
+                }
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    document.querySelectorAll(".about-box").forEach(el => {
+        observer.observe(el);
+    });
+}
+
+
+// ---------- GLOW ANIMATION ----------
+function startTravelingGlow() {
+    const letters = document.querySelectorAll(".about .single-letter");
+
+    if (!letters.length) return;
+
+    let index = 0;
+    const range = 6;
+    const speed = 50;
+
+    function loop() {
+        letters.forEach((letter, i) => {
+            const dist = Math.abs(i - index);
+
+            if (dist < range) {
+                const intensity = 1 - dist / range;
+
+                letter.style.color = `rgb(255, ${80 * intensity}, ${80 * intensity})`;
+                letter.style.textShadow = `0 0 ${15 * intensity}px red`;
+
+                letter.style.transform = `translateY(${-6 * intensity}px) scale(${1 + intensity * 0.2})`;
+            } else {
+                letter.style.color = "";
+                letter.style.textShadow = "";
+                letter.style.transform = "";
+            }
+        });
+
+        index++;
+        if (index > letters.length + range) index = -range;
+
+        setTimeout(loop, speed);
+    }
+
+    loop();
+}
+
+
+// ---------- PARALLAX (FIXED - NO CONFLICT WITH GLOW) ----------
+function initAboutParallax() {
+    const about = document.querySelector(".about");
+    const mainText = document.querySelector(".about-box.main h1");
+
+    if (!about || !mainText) return;
+
+    about.addEventListener("mousemove", (e) => {
+
+        if (!mainText.classList.contains("animate-reveal")) return;
+
+        const rect = about.getBoundingClientRect();
+
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+        // IMPORTANT FIX:
+        // only translate parent container, not overwrite glow transforms
+        mainText.style.setProperty("--x", x * 30);
+        mainText.style.setProperty("--y", y * 30);
+
+        mainText.style.transform = `translate(${x * 30}px, ${y * 30}px)`;
+    });
+
+    about.addEventListener("mouseleave", () => {
+        mainText.style.transform = "translate(0,0)";
+    });
+}
+
+
+// ================= INIT =================
+window.addEventListener("load", () => {
+    typeWriter();
+    initSkillsInteraction();
+    initPhotoHubLoop();
+    initAboutAnimation();
+});
+
+
+// ================= RESIZE =================
+let resizeTimeout;
+
+window.addEventListener("resize", () => {
+    clearTimeout(resizeTimeout);
+
+    resizeTimeout = setTimeout(() => {
+        // reserved for future responsive fixes
+    }, 300);
+});
