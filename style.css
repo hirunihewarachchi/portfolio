@@ -1464,3 +1464,10 @@ input-group input:focus,
     transition: 0.3s;
     box-shadow: 0 5px 20px rgba(255, 0, 0, 0.3);
 }
+
+.contact-submit-btn:hover {
+    background: #fff;
+    color: #ff0000;
+    transform: scale(1.05);
+    box-shadow: 0 5px 30px rgba(255, 255, 255, 0.5);
+}
