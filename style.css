@@ -184,7 +184,8 @@ nav{
 }
 
 .dropdown .links a:hover{
-    background-color: red;
+    background-color: var(--accent);
+    color: #fff;
 }
 
 /*Footer*/
