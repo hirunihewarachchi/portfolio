@@ -402,6 +402,12 @@ body {
     transition: 0.8s ease;
 }
 
+/* reveal animation */
+.about-box.animate-reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /*    Education*/
 
