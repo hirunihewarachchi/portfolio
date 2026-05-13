@@ -1471,3 +1471,13 @@ input-group input:focus,
     transform: scale(1.05);
     box-shadow: 0 5px 30px rgba(255, 255, 255, 0.5);
 }
+
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-info, .contact-form-wrapper {
+        width: 100%;
+    }
+}
