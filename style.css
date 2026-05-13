@@ -606,6 +606,32 @@ body {
     line-height: 1.8;
 }
 
+
+/* ================= OPTIONAL VERTICAL FLIP ================= */
+
+.flip.flip-vertical > .back{
+    transform: rotateX(-180deg);
+}
+
+.flip.flip-vertical:hover > .front{
+    transform: rotateX(180deg);
+}
+
+.flip.flip-vertical:hover > .back{
+    transform: rotateX(0deg);
+}
+
+/* ================= TEXT SHADOW ================= */
+
+.text-shadow{
+    text-shadow:
+            0 0 10px rgba(255,0,0,0.4),
+            0 0 20px rgba(255,0,0,0.2);
+}
+
+
+
+
 /*Footer*/
 .text {
     position: fixed;
