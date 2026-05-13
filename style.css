@@ -102,6 +102,12 @@ nav{
     align-items: center;
 }
 
+.dropdown-theme-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
 .logo{
     color: white;
     font-size: 2rem;
