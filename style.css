@@ -1268,14 +1268,14 @@ glass-card:hover {
     width: 100%;
     overflow: hidden;
     position: relative;
-    height: 100vh;
+    height: 600px;
 }
 
 .gallery-track {
     display: flex;
     width: max-content;
     animation: scroll 20s linear infinite;
-    position: absolute;
+    position: relative;
 }
 
 .gallery-track img {
