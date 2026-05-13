@@ -1051,16 +1051,18 @@ body {
 
 /*Assignment*/
 
-#assignments {
+.assignments-section {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: var(--spacing-xxl) var(--spacing-l);
+    justify-content: center;
     background-color: black;
+    padding: 100px 5%;
 }
+
 
 .assignments .title h1 {
     color: white;
