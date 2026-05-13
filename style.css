@@ -692,6 +692,18 @@ body {
     /*padding: 100px 5%;*/
 }
 
+.skill-section .title h1 {
+    color: white;
+    text-align: center;
+    font-size: 3.2em;
+    font-weight: 1000;
+    font-style: oblique;
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
+    text-shadow: red 2px 2px 2px;
+    padding: 5px 5px;
+    width: 100vw;
+    margin-bottom: 50px;
+}
 
 .skill .title h1{
     color: white;
