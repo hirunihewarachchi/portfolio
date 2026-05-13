@@ -1064,7 +1064,7 @@ body {
 }
 
 
-..assignments-section .title h1 {
+.assignments-section .title h1 {
     color: white;
     text-align: center;
     font-size: 3.2em;
@@ -1076,6 +1076,16 @@ body {
     width: 100vw;
     margin-bottom: 80px;
 }
+
+.assignments-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
 
 @media (max-width: 768px) {
 
