@@ -427,6 +427,24 @@ body {
     font-weight: 500;
     opacity: 0.8;
 }
+
+/* ================= LETTER SYSTEM ================= */
+.about .single-letter {
+    display: inline-block;
+    color: red;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0;
+
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+.about .letter-space {
+    display: inline-block;
+    width: 0.4em;
+}
+
 /*    Education*/
 
 #education{
