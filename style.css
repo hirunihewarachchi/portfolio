@@ -1103,6 +1103,17 @@ body {
     overflow: hidden;
 }
 
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    pointer-events: none;
+}
+
 
 @media (max-width: 768px) {
 
