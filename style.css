@@ -1679,3 +1679,30 @@ body.light-mode .typewriter span {
     color: #cc0000;
     text-shadow: 0 0 8px rgba(180, 0, 0, 0.5);
 }
+
+
+/* ================= RESPONSIVE: THEME TOGGLE BUTTON ================= */
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+    .theme-toggle-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.15rem;
+        margin-left: 6px;
+        margin-right: 60px; /* make room for hamburger */
+    }
+}
+
+/* Mobile (< 768px) */
+@media (max-width: 768px) {
+    .theme-toggle-btn {
+        display: none; /* hidden in nav; shown in dropdown instead */
+    }
+
+    .dropdown-theme-btn {
+        display: flex;
+        font-size: 1.1rem;
+        padding: 14px 20px;
+    }
+}
