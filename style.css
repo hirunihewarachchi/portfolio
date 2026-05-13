@@ -964,6 +964,23 @@ body {
 }
 
 
+/* Background Image */
+
+.card__background{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s ease;
+    filter: brightness(0.45);
+}
+
+.card:hover .card__background{
+    transform: scale(1.1);
+    filter: brightness(0.3);
+}
+
+
 /*Assignment*/
 
 #assignments {
