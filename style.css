@@ -909,28 +909,29 @@ body {
 }
 
 /*projects*/
-:root {
-    --background-dark: #1b1f22;
-    --spacing-s: 8px;
-    --spacing-m: 16px;
-    --spacing-l: 24px;
-    --spacing-xl: 32px;
-    --spacing-xxl: 64px;
-    --text-light: rgba(255,255,255,0.75);
-    --text-lighter: rgba(255,255,255,0.9);
-    --width-container: 1200px;
+
+.projects{
+    width: 100%;
+    min-height: 100vh;
+    background: #050505;
+    padding: 80px 8%;
+    overflow: hidden;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-}
+/* Title */
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    /*background: var(--background-dark);*/
+.title h1 {
+    color: white;
+    /*position: absolute;*/
+    text-align: center;
+    font-size: 3.2em;
+    font-weight: 1000;
+    font-style: oblique;
+    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
+    text-shadow: red 2px 2px 2px;
+    padding: 5px 5px;
+    width: 100vw;
+    top: 10vh;
 }
 
 #projects {
