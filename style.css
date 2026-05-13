@@ -167,8 +167,9 @@ nav{
     transform: translateY(-500px);
     width: 100%;
     height: auto;
-    backdrop-filter: blur(5px)brightness(40%);
-    box-shadow: 0 0 20px black;
+    background-color: var(--dropdown-bg);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
     transition: 0.2s linear;
 }
 
