@@ -348,14 +348,21 @@ section{
 
 /*Add css for about*/
 
+body {
+    overflow-x: hidden;
+}
+
 #about {
     /*position: absolute;*/
-    width: 100vw;
-    height: 100vh;
-    margin: 2px 2px auto;
-    font-family: sans-serif;
-    padding-top: 10vh;
-    text-align: center;
+    /*width: 100vw;*/
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 60px 20px;
+    box-sizing: border-box;
     cursor: pointer;
 }
 
