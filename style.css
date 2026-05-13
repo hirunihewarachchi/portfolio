@@ -1632,3 +1632,8 @@ body.light-mode .skill-btn:hover {
     color: #fff;
     box-shadow: 0 0 30px rgba(180, 0, 0, 0.5);
 }
+
+/* Photo Hub */
+body.light-mode .photo_hub {
+    background: #f5f5f5;
+}
