@@ -733,61 +733,20 @@ body {
     align-items: center;
     gap: 40px;
 }
-
-.skill .container .logo-scroller-items{
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
+.skill-icon {
+    font-size: 4rem;
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    animation: float 4s ease-in-out infinite;
 }
 
-.logo-scroller {
-    position: relative;
-    display: block;
-    width:100%;
-    margin:0 auto;
-
+.skill-icon:nth-child(odd) {
+    animation-delay: 1s;
 }
 
-.logo-scroller-content {
-    padding: 200px 0;
-}
-
-.logo-scroller-items {
-    margin: -58px 0;
-    overflow: hidden;
-    cursor: default;
-}
-
-.logo-scroller-row {
-    display: flex;
-    position: relative;
-    white-space: nowrap;
-    gap: 40px;
-}
-
-.logo-scroller-item {
-    position: relative;
-    flex: 1 1 auto;
-    min-width: 150px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo-scroller-item span {
-    position: relative;
-    display: inline-block;
-    z-index: 1;
-}
-
-.logo-scroller-item span img {
-    max-width: 100%;
-    max-height: 100px;
-    object-fit: contain;
-    display: block;
+.skill-icon:nth-child(3n) {
+    animation-delay: 2s;
 }
 
 
