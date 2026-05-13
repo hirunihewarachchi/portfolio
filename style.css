@@ -92,6 +92,11 @@ nav{
     box-shadow: 0 0 20px var(--accent-glow);
 }
 
+.dropdown-theme-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 15px var(--accent-glow);
+}
 
 .nav-container{
     /*position: fixed;*/
@@ -102,16 +107,13 @@ nav{
     align-items: center;
 }
 
-.dropdown-theme-btn:hover {
-    background: var(--accent);
-    color: #fff;
-    box-shadow: 0 0 15px var(--accent-glow);
-}
+
 
 .logo{
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    transition: color 0.4s ease;
 }
 .logo span{
      color: red;
