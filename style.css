@@ -1404,3 +1404,14 @@ glass-card:hover {
     color: #ff0000;
     filter: drop-shadow(0 0 10px #ff0000);
 }
+
+.info-details h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.info-details p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
