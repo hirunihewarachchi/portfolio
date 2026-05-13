@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="IJSE Web CSS Tute 01">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Tute Case 01</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+        section{
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        div{
+            width: 50vw;
+            height: 50vh;
+            position: absolute;
+        }
+
+        #div1{
+            background-color: red;
+        }
+
+        #div2{
+            background-color: green;
+            right: 0;
+            top: 0;
+        }
+
+        #centerSquare, #centerCircle, .bigCircle, .smallSquare{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #div3{
+            background-color: orange;
+            bottom: 0;
+            left: 0;
+        }
+
+        #div4{
+            background-color: deeppink;
+            bottom: 0;
+            right: 0;
+        }
+
+        #centerSquare{
+            height: Calc(100vh/3);
+            width: Calc(100vh/3);
+            background-color: white;
+        }
+
+        #centerCircle{
+            background-color: red;
+            height: Calc(50vh/3);
+            width: Calc(50vh/3);
+            border-radius: 50%;
+        }
+
+        .bigCircle{
+            width: Calc(50vw/3);
+            height: Calc(50vw/3);
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .smallSquare{
+            width: Calc(50vw/8);
+            height: Calc(50vw/8);
+            background-color: red;
+        }
+
+        .centerCircle{
+            background-color: white;
+            height: Calc(50vh/2);
+            width: Calc(50vh/2);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        #centerCircle1{
+            top: Calc((-50vh/2)/2);
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #centerCircle2{
+            bottom: Calc((-50vh/2)/2);
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .cornerCircle{
+            width: Calc(50vw/3);
+            height: Calc(50vw/3);
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+        }
+
+        #cornerCircle1{
+            top: Calc(-50vh/3);
+            left: Calc((-50vw/3)/2);
+        }
+
+        #cornerCircle2{
+            top: Calc(-50vh/3);
+            right: Calc((-50vw/3)/2);
+        }
+
+        #cornerCircle3{
+            bottom: Calc(-50vh/3);
+            left: Calc((-50vw/3)/2);
+        }
+
+        #cornerCircle4{
+            bottom: Calc(-50vh/3);
+            right: Calc((-50vw/3)/2);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<section>
+    <div id="div1">
+        <div class="bigCircle">
+            <div class="smallSquare"></div>
+        </div>
+    </div>
+    <div id="div2">
+        <div class="bigCircle">
+            <div class="smallSquare"></div>
+        </div>
+    </div>
+    <div id="div3">
+        <div class="bigCircle">
+            <div class="smallSquare"></div>
+        </div>
+    </div>
+    <div id="div4">
+        <div class="bigCircle">
+            <div class="smallSquare"></div>
+        </div>
+    </div>
+
+    <div id="centerSquare">
+        <div id="centerCircle"></div>
+    </div>
+
+    <div id="centerCircle1" class="centerCircle"></div>
+    <div id="centerCircle2" class="centerCircle"></div>
+
+    <div id="cornerCircle1" class="cornerCircle"></div>
+    <div id="cornerCircle2" class="cornerCircle"></div>
+    <div id="cornerCircle3" class="cornerCircle"></div>
+    <div id="cornerCircle4" class="cornerCircle"></div>
+</section>
+</body>
+
+</html>

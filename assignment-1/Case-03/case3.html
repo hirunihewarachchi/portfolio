@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="web, html, css, javascript, js, java, python">
+    <meta name="description" content="IJSE Web CSS Tute 01">
+    <meta name="author" content="IJSE">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Tute Case 01</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <link rel="stylesheet" href="../assets/lib/normalize.css">
+
+    <style>
+
+        body{
+            display: grid;
+            align-items: center;
+        }
+        #bigCircle{
+            width: 300px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            border: 8px solid gray;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #smallCircle{
+            width: 285px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            border: 8px solid red;
+            /*position: fixed;*/
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        #circleOne{
+            width: 285px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background-color: darkviolet;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+
+        #circleTwo{
+            width: 285px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background-color: dodgerblue;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 25px;
+        }
+
+        #circleThree{
+            width: 285px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            background-color: coral;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #sectionOne{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #sectionTwo{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #sectionThree{
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="bigCircle">
+        <div id="smallCircle"></div>
+    </div>
+
+    <section id="sectionOne">
+        <div id="circleOne">Hello</div>
+    </section>
+
+
+    <section id="sectionTwo">
+        <div id="circleTwo">Welcome to</div>
+    </section>
+
+    <section id="sectionThree">
+        <div id="circleThree">Institute <br>of <br>Software <br>Engineering</div>
+    </section>
+</body>
+
+</html>
