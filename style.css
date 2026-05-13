@@ -532,6 +532,32 @@ body {
     box-shadow: 0 0 20px rgba(255,0,0,0.12);
 }
 
+
+/* ================= FRONT ================= */
+
+.flip > .front{
+    background: linear-gradient(
+            145deg,
+            #000000,
+            #000000
+    );
+    transform: rotateY(0deg);
+}
+
+/* ================= BACK ================= */
+
+.flip > .back{
+    background: linear-gradient(
+            145deg,
+            #0b0a0a,
+            #320000
+    );
+    transform: rotateY(-180deg);
+    color: white;
+    opacity: 1;
+}
+
+
 /*Footer*/
 .text {
     position: fixed;
