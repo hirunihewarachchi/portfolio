@@ -1372,3 +1372,12 @@ glass-card:hover {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
