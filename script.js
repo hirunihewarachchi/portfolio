@@ -143,3 +143,16 @@ function initPhotoHubLoop() {
     track.addEventListener("mouseleave", () => isPaused = false);
 }
 
+// ================= ABOUT SECTION (FIXED SYSTEM) =================
+
+let glowStarted = false;
+
+function initAboutAnimation() {
+    const aboutHeadings = document.querySelectorAll(".about-box h1");
+
+    if (!aboutHeadings.length) return;
+
+    splitAboutLetters(aboutHeadings);
+    initAboutObserver();
+    initAboutParallax();
+}
