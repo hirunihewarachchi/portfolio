@@ -629,7 +629,37 @@ body {
             0 0 20px rgba(255,0,0,0.2);
 }
 
+/* ================= RESPONSIVE ================= */
 
+@media(max-width: 768px){
+
+    #education{
+        padding: 80px 5%;
+    }
+
+    .education .title h1{
+        font-size: 2.3rem;
+    }
+
+    .flip{
+        width: 100%;
+        max-width: 320px;
+        height: 220px;
+    }
+
+    .education .flip .front h1{
+        font-size: 1.5rem;
+        margin-top: 45px;
+    }
+
+    .flip > .back h2{
+        font-size: 1.2rem;
+    }
+
+    .flip > .back p{
+        font-size: 0.85rem;
+    }
+}
 
 
 /*Footer*/
