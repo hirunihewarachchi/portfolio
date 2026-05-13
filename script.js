@@ -81,3 +81,33 @@ function eraseText() {
     }
 }
 
+// ================= SKILLS INTERACTION =================
+function initSkillsInteraction() {
+    const buttons = document.querySelectorAll('.skill-btn');
+    const icons = document.querySelectorAll('.skill-icon');
+
+    if (!buttons.length || !icons.length) return;
+
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            const category = button.getAttribute('data-category');
+
+            icons.forEach(icon => {
+                if (icon.classList.contains(category)) {
+                    icon.classList.add('highlight');
+                    icon.classList.remove('dimmed');
+                } else {
+                    icon.classList.add('dimmed');
+                    icon.classList.remove('highlight');
+                }
+            });
+        });
+
+        button.addEventListener('mouseleave', () => {
+            icons.forEach(icon => {
+                icon.classList.remove('highlight', 'dimmed');
+            });
+        });
+    });
+}
+
