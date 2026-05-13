@@ -1673,3 +1673,9 @@ body.light-mode .content button:hover {
 body.light-mode .main-container .image {
     box-shadow: 0 0 50px rgba(180, 0, 0, 0.5);
 }
+
+/* Typewriter */
+body.light-mode .typewriter span {
+    color: #cc0000;
+    text-shadow: 0 0 8px rgba(180, 0, 0, 0.5);
+}
