@@ -705,26 +705,33 @@ body {
     margin-bottom: 50px;
 }
 
-.skill .title h1{
-    color: white;
-    position: absolute;
-    text-align: center;
-    font-size: 3.2em;
-    font-weight: 1000;
-    font-style: oblique;
-    background: linear-gradient(135deg, #000000, #f61818 50%, #000000);
-    text-shadow: red 2px 2px 2px;
-    padding: 5px 5px;
-    top: 10vh;
-    width: 100vw;
+
+.skills-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
 
-.skill .container .img img{
-    width: 100vw;
-    height: 60vh;
+.skills-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    perspective: 1000px;
+}
+
+.icon-cloud {
     position: relative;
-    top: 30vh;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .skill .container .logo-scroller-items{
