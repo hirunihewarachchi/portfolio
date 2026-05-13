@@ -1028,6 +1028,26 @@ body {
 }
 
 
+/* Responsive */
+
+@media(max-width:768px){
+
+    .projects{
+        padding: 60px 5%;
+    }
+
+    .title h1{
+        font-size: 2.3rem;
+    }
+
+    .card{
+        height: 330px;
+    }
+
+    .card__heading{
+        font-size: 1.3rem;
+    }
+}
 
 /*Assignment*/
 
