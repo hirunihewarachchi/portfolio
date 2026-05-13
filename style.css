@@ -679,11 +679,20 @@ body {
 
 /*Skilll Section*/
 
-#skill {
+.skill-section {
     position: relative;
     width: 100vw;
-    margin: 0px auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-primary);
+    transition: background-color 0.4s ease;
+    /*padding: 100px 5%;*/
 }
+
+
 .skill .title h1{
     color: white;
     position: absolute;
