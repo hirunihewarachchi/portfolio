@@ -558,6 +558,54 @@ body {
 }
 
 
+
+/* ================= HOVER EFFECT ================= */
+
+.flip:hover > .front{
+    transform: rotateY(180deg);
+}
+
+.flip:hover > .back{
+    transform: rotateY(0deg);
+}
+
+/* ================= CARD GLOW ================= */
+
+.flip:hover > .front,
+.flip:hover > .back{
+    border-color: #ff1e1e;
+    box-shadow:
+            0 0 20px rgba(255,0,0,0.5),
+            0 0 40px rgba(255,0,0,0.3);
+}
+
+/* ================= FRONT TEXT ================= */
+
+.education .flip .front h1{
+    color: black;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 55px;
+    text-shadow:
+            0 0 10px rgb(234, 35, 35),
+            0 0 20px rgb(225, 19, 19);
+}
+
+/* ================= BACK TEXT ================= */
+
+.flip > .back h2{
+    color: #ff4040;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.flip > .back p{
+    color: #f5f5f5;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
 /*Footer*/
 .text {
     position: fixed;
