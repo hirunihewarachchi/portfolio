@@ -981,6 +981,21 @@ body {
 }
 
 
+/* Dark Overlay */
+
+.card::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+            to top,
+            rgba(0,0,0,0.95),
+            rgba(0,0,0,0.2)
+    );
+    z-index: 1;
+}
+
+
 /*Assignment*/
 
 #assignments {
