@@ -428,7 +428,7 @@ body {
     opacity: 0.8;
 }
 
-/* ================= LETTER SYSTEM ================= */
+/* ================= Letter system================= */
 .about .single-letter {
     display: inline-block;
     color: red;
@@ -444,6 +444,20 @@ body {
     display: inline-block;
     width: 0.4em;
 }
+
+/* ================= Mobile view ================= */
+@media (max-width: 768px) {
+    .about-box.main h1 {
+        font-size: clamp(1.8rem, 9vw, 3.2rem);
+    }
+
+    .about-box.bottom h1 {
+        font-size: 1.1rem;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
 
 /*    Education*/
 
