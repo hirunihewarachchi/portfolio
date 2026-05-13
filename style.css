@@ -827,15 +827,24 @@ body {
 }
 
 /*Service */
+.services-section-wrapper {
+    min-height: auto !important; /* Force override of global section height */
+    padding-bottom: 0;
+}
 
-#services{
-    width: 100vw;
-    font-family: sans-serif;
-    background: black; /* dark background for contrast */
-    color: #fff;
-    display: grid;
-    place-items: center;
+#services {
     position: relative;
+    width: 100vw;
+    min-height: auto;
+    font-family: sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    /*padding: 60px 0; !* Reduced padding *!*/
 }
 
 .services .title h1{
