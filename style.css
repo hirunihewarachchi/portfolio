@@ -1607,3 +1607,28 @@ body.light-mode .contact-form-wrapper {
     background: rgba(0, 0, 0, 0.04);
     border-color: rgba(0, 0, 0, 0.1);
 }
+
+/* Skills */
+body.light-mode .skill-icon {
+    color: #222;
+    filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.15));
+}
+
+body.light-mode .skill-icon.highlight {
+    color: #cc0000;
+    filter: drop-shadow(0 0 20px #cc0000);
+}
+
+body.light-mode .skill-btn {
+    color: #1a1a1a;
+    border-color: #cc0000;
+}
+
+body.light-mode .skill-btn::before {
+    background: #cc0000;
+}
+
+body.light-mode .skill-btn:hover {
+    color: #fff;
+    box-shadow: 0 0 30px rgba(180, 0, 0, 0.5);
+}
