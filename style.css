@@ -1,3 +1,20 @@
+/* ================= Theme css variables ================= */
+:root {
+    /* Dark mode (default) */
+    --bg-primary:       #000000;
+    --bg-secondary:     #050505;
+    --bg-nav:           #000000;
+    --text-primary:     #ffffff;
+    --text-secondary:   rgba(255,255,255,0.7);
+    --accent:           #ff0000;
+    --accent-glow:      rgba(255,0,0,0.4);
+    --card-bg:          rgba(255,255,255,0.05);
+    --card-border:      rgba(255,255,255,0.1);
+    --card-hover-bg:    rgba(255,255,255,0.1);
+    --footer-bg:        #000000;
+    --dropdown-bg:      rgba(0,0,0,0.85);
+    --gradient-title:   linear-gradient(135deg, #000000, #f61818 50%, #000000);
+}
 
 html {
     scroll-behavior: smooth;
