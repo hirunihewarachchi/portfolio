@@ -41,3 +41,43 @@ function toggleTheme() {
         });
     }
 })();
+
+
+// ================= TYPEWRITER =================
+const texts = [
+    " WEB DEVELOPER",
+    " AI ENGINEER",
+    " PHOTOGRAPHER"
+];
+
+let typingSpeed = 100;
+let textIndex = 0;
+let characterIndex = 0;
+
+const textElement = document.querySelector(".typewriter-text");
+
+function typeWriter() {
+    if (!textElement) return;
+
+    if (characterIndex < texts[textIndex].length) {
+        textElement.textContent += texts[textIndex].charAt(characterIndex);
+        characterIndex++;
+        setTimeout(typeWriter, typingSpeed);
+    } else {
+        setTimeout(eraseText, 1000);
+    }
+}
+
+function eraseText() {
+    if (!textElement) return;
+
+    if (textElement.textContent.length > 0) {
+        textElement.textContent = textElement.textContent.slice(0, -1);
+        setTimeout(eraseText, 50);
+    } else {
+        textIndex = (textIndex + 1) % texts.length;
+        characterIndex = 0;
+        setTimeout(typeWriter, 500);
+    }
+}
+
