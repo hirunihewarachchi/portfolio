@@ -1553,3 +1553,28 @@ body.light-mode .education .flip .front h1 {
     color: #111;
     text-shadow: 0 0 10px rgba(180, 0, 0, 0.5), 0 0 20px rgba(180, 0, 0, 0.3);
 }
+
+
+/* Assignment section */
+body.light-mode .assignments-section {
+    background-color: #f5f5f5;
+}
+
+body.light-mode .glass-card {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .glass-card:hover {
+    background: rgba(200, 0, 0, 0.07);
+    border-color: rgba(180, 0, 0, 0.4);
+    box-shadow: 0 15px 35px rgba(180, 0, 0, 0.15);
+}
+
+body.light-mode .glass-content h2 {
+    color: #111;
+}
+
+body.light-mode .glass-content p {
+    color: rgba(0, 0, 0, 0.65);
+}
