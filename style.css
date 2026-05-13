@@ -272,6 +272,8 @@ section{
 .content p{
     font-size: 25px;
     margin: 10px 0;
+    color: var(--text-secondary);
+
 }
 
 /*.nav-container .links .a:hover{*/
