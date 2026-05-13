@@ -1121,6 +1121,45 @@ glass-card:hover {
     box-shadow: 0 15px 35px rgba(255, 0, 0, 0.2);
 }
 
+.glass-content {
+    padding: 30px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.glass-icon {
+    font-size: 4rem;
+    color: #ff0000;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 10px #ff0000);
+}
+
+.glass-content h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.glass-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.glass-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #ff0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
 
 
 
