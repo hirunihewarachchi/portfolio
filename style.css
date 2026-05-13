@@ -459,6 +459,15 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 
+/* ================= GLOBAL ================= */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
 /*    Education*/
 
 #education{
