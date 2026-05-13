@@ -86,6 +86,13 @@ nav{
     margin-right: 8px;
 }
 
+.theme-toggle-btn:hover {
+    background: var(--accent);
+    transform: scale(1.15) rotate(20deg);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+
 .nav-container{
     /*position: fixed;*/
     width: 100%;
