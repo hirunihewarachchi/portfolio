@@ -1064,9 +1064,8 @@ body {
 }
 
 
-.assignments .title h1 {
+..assignments-section .title h1 {
     color: white;
-    /*position: absolute;*/
     text-align: center;
     font-size: 3.2em;
     font-weight: 1000;
@@ -1075,7 +1074,7 @@ body {
     text-shadow: red 2px 2px 2px;
     padding: 5px 5px;
     width: 100vw;
-    top: 10vh;
+    margin-bottom: 80px;
 }
 
 @media (max-width: 768px) {
