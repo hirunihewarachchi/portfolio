@@ -249,11 +249,12 @@ section{
 }
 
 .content h1 span{
-    font-width: 700;
-    text-shadow: 0 0 10px red;
-    color: red;
+    /*font-width: 700;*/
+    text-shadow: 0 0 10px var(--accent);
+    color: var(--accent);
     font-size: 80px;
     font-weight: 750;
+    transition: color 0.4s ease;
 }
 
 .content.typewriter{
