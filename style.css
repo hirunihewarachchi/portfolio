@@ -1245,10 +1245,11 @@ glass-card:hover {
 
 /*photohub*/
 
-.photo_hub{
-    height: 100vh;
-    top: 100vh;
+.photo_hub {
+    min-height: 70vh;
+    padding: 80px 0;
     position: relative;
+    width: 100%;
 }
 
 .photo_hub .title h1{
